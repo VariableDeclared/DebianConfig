@@ -17,15 +17,21 @@ ZSH_THEME="kolo"
 
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/projects
-export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3.6
 source /usr/local/bin/virtualenvwrapper.sh
+export LD_LIBRARY_PATH=/usr/local/cuda-10.0/extras/CUPTI/lib64:/usr/local/cuda-10.0/lib64:/home/pjds/software/tools/cuda/lib64/
+
+
 
 # Environment variable file
 source ~/.envs
 
 # Add Android Studio to path
 export ANDROID_HOME=~/dev/Android-Studio
-export PATH=${PATH}:${ANDROID_HOME}/build-tools:${ANDROID_HOME}/platform-tools:~/android-sdk/tools/bin:${MAVEN_HOME}:~/scripts:/home/pjds/software/node/bin:/home/pjds/.local/bin
+export PJDS_SOFTWARE_PATH=~/software
+export PATH=${PATH}:${ANDROID_HOME}/build-tools:${ANDROID_HOME}/platform-tools:~/android-sdk/tools/bin:${MAVEN_HOME}:~/scripts:/home/pjds/software/node/bin:/home/pjds/.local/bin:/usr/local/cuda-9.0/bin:"${PJDS_SOFTWARE_PATH}/ethminer-0.17.0-linux-x86_64/bin/"
+export PYTHONDONTWRITEBYTECODE=1
+
 
 
 
@@ -136,7 +142,7 @@ export SDKMAN_DIR="/home/pjds/.sdkman"
 
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/home/pjds/Downloads/google-cloud-sdk-227.0.0-linux-x86_64/google-cloud-sdk/path.zsh.inc' ]; then . '/home/pjds/Downloads/google-cloud-sdk-227.0.0-linux-x86_64/google-cloud-sdk/path.zsh.inc'; fi
+if [ -f '/home/pjds/software/google-cloud-sdk/path.zsh.inc' ]; then . '/home/pjds/software/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/home/pjds/Downloads/google-cloud-sdk-227.0.0-linux-x86_64/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/pjds/Downloads/google-cloud-sdk-227.0.0-linux-x86_64/google-cloud-sdk/completion.zsh.inc'; fi
+if [ -f '/home/pjds/software/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/pjds/software/google-cloud-sdk/completion.zsh.inc'; fi

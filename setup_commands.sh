@@ -1,5 +1,7 @@
 ssh-keygen
-sudo apt-get install -y openvpn python-pip htop irssi
+sudo apt-get install -y openvpn python2 python2-dev \
+        python3 python3-dev python3-pip htop irssi \
+        vim build-essential gitk
 mkdir ~/projects/
 cd $_
 git clone git@github.com:VariableDeclared/DebianConfig.git
@@ -8,7 +10,7 @@ cp projects/DebianConfig/.vimrc ~/
 cp projects/DebianConfig/.zshrc ~/
 touch .envs
 touch .aliases
-sudo pip install virtualenvwrapper
+sudo pip3 install virtualenvwrapper
 cd projects/DebianConfig
 echo "deb http://packages.cloud.google.com/apt $CLOUD_SDK_REPO main" | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
 curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
@@ -20,3 +22,7 @@ git clone git@github.com:sjl/badwolf.git
 cd badwolf
 cp -r colors ~/.vim/
 cd ~/
+
+echo "Start vim and run :PlugInstall."
+
+# https://www.vim.org/scripts/script.php?script_id=1218

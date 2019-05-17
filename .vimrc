@@ -27,3 +27,7 @@ set foldmethod=indent
 "
 " Colour schemes are installed to .vim/colors.
 " I use vim plug.
+
+call plug#begin()
+Plug 'scrooloose/nerdcommenter'
+call plug#end()

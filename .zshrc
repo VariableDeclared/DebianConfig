@@ -14,10 +14,10 @@ ZSH_THEME="kolo"
 
 
 
-
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/projects
-export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3.6
+export VIRTUALENVWRAPPER_VIRTUALENV=/usr/local/bin/virtualenv
 source /usr/local/bin/virtualenvwrapper.sh
 export LD_LIBRARY_PATH=/usr/local/cuda-10.0/extras/CUPTI/lib64:/usr/local/cuda-10.0/lib64:/home/pjds/software/tools/cuda/lib64/
 
@@ -29,7 +29,7 @@ source ~/.envs
 # Add Android Studio to path
 export ANDROID_HOME=~/dev/Android-Studio
 export PJDS_SOFTWARE_PATH=~/software
-export PATH=${PATH}:${ANDROID_HOME}/build-tools:${ANDROID_HOME}/platform-tools:~/android-sdk/tools/bin:${MAVEN_HOME}:~/scripts:/home/pjds/software/node/bin:/home/pjds/.local/bin:/usr/local/cuda-9.0/bin:"${PJDS_SOFTWARE_PATH}/ethminer-0.17.0-linux-x86_64/bin/"
+export PATH=${PATH}:${ANDROID_HOME}/build-tools:${ANDROID_HOME}/platform-tools:~/android-sdk/tools/bin:${MAVEN_HOME}:~/scripts:${PJDS_SOFTWARE}/node/bin:/home/pjds/.local/bin:/usr/local/cuda-9.0/bin:"${PJDS_SOFTWARE_PATH}/ethminer-0.17.0-linux-x86_64/bin/"
 export PYTHONDONTWRITEBYTECODE=1
 
 

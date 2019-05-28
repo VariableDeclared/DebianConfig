@@ -7,6 +7,7 @@ set expandtab
 set number
 set showcmd
 set cursorline
+filetype plugin on
 filetype indent on
 set wildmenu
 set lazyredraw
@@ -18,6 +19,10 @@ set foldlevelstart=10
 set foldnestmax=10
 nnoremap <space> za
 set foldmethod=indent
+call plug#begin()
+Plug 'scrooloose/nerdcommenter'
+Plug 'davidhalter/jedi-vim'
+call plug#end()
 
 " Plugins: To setup plugin add lines
 " call plug#begin()

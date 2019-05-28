@@ -14,7 +14,7 @@ ZSH_THEME="kolo"
 
 
 
-export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+export EDITOR=vim
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/projects
 export VIRTUALENVWRAPPER_VIRTUALENV=/usr/local/bin/virtualenv
